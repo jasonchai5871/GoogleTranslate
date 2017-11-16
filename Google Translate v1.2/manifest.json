@@ -4,6 +4,7 @@
     "name": "Google translate",
     "description": "Google translate",
     "version": "2.2",
+    "default_locale": "en",
 
   "background": {
      "scripts" : ["translate.js" ] 
@@ -11,7 +12,8 @@
   },
 
   "permissions": [
-    "contextMenus"
+    "contextMenus",
+    "storage"
   ]
 
 
