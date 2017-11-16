@@ -1,0 +1,18 @@
+
+{
+    "manifest_version": 2,
+    "name": "Google translate",
+    "description": "Google translate",
+    "version": "2.2",
+
+  "background": {
+     "scripts" : ["translate.js" ] 
+
+  },
+
+  "permissions": [
+    "contextMenus"
+  ]
+
+
+}
