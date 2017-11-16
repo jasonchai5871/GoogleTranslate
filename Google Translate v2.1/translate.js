@@ -20,3 +20,10 @@ storage.get({
 
 });
 
+chrome.contextMenus.onClicked.addListener(function (info, tab) {
+    var highlightedText = info.selectionText;
+    chrome.windows.create({
+        url: "https://www.google.com/search?q=" + encodeURIComponent(highlightedText),
+    });
+
+});
