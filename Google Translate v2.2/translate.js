@@ -22,8 +22,22 @@ storage.get({
 
 chrome.contextMenus.onClicked.addListener(function (info, tab) {
     var highlightedText = info.selectionText;
-    chrome.windows.create({
-        url: "https://www.google.com/search?q=" + encodeURIComponent(highlightedText),
-    });
+
+    if (info.menuItemId == 'Translate_To_zh_CH') {
+        storage.get({
+        }, function (item) {
+            chrome.windows.create({
+                url: "https://www.google.com/search?q=" + encodeURIComponent(highlightedText),
+            });
+        });
+    }
+    if (info.menuItemId == 'Translate_To_en') {
+        storage.get({
+        }, function (item) {
+            chrome.windows.create({
+                url: "https://www.bing.com/search?q=" + encodeURIComponent(highlightedText),
+            });
+        });
+    }
 
 });
