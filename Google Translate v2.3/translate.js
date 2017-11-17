@@ -25,17 +25,19 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
 
     if (info.menuItemId == 'Translate_To_zh_CH') {
         storage.get({
+            'GoogletranslateURL': 'https://translate.google.com/#auto/zh-CN/'
         }, function (item) {
             chrome.windows.create({
-                url: "https://www.google.com/search?q=" + encodeURIComponent(highlightedText),
+                url: item.GoogletranslateURL + encodeURIComponent(highlightedText),
             });
         });
     }
     if (info.menuItemId == 'Translate_To_en') {
         storage.get({
+            'GoogletranslateURL': 'https://translate.google.com/#auto/en/'
         }, function (item) {
             chrome.windows.create({
-                url: "https://www.bing.com/search?q=" + encodeURIComponent(highlightedText),
+                url: item.GoogletranslateURL + encodeURIComponent(highlightedText),
             });
         });
     }
