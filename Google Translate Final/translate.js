@@ -29,6 +29,9 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
         }, function (item) {
             chrome.windows.create({
                 url: item.GoogletranslateURL + encodeURIComponent(highlightedText),
+                type: "popup",
+                width: 1000,
+                height: 500
             });
         });
     }
@@ -38,6 +41,9 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
         }, function (item) {
             chrome.windows.create({
                 url: item.GoogletranslateURL + encodeURIComponent(highlightedText),
+                type: "popup",
+                width: 1000,
+                height: 500
             });
         });
     }
